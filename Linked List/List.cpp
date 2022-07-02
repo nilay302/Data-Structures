@@ -13,6 +13,9 @@ int main(){
     Link.push_back(7);
     Link.push_back(8);
 
+    //inserting an element
+    Link.insert(4,2);
+    
     //displaying element
     Link.display();
     return 0;

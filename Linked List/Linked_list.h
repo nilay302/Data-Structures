@@ -41,6 +41,21 @@ class List{
         }
     }
 
+    void insert(int data,int pos){
+        if(pos==0){
+            push_front(data);
+        }
+        else{
+            Node * n = new Node(data);
+            Node * p = head;
+            for(int i = 0;i<pos-1;i++){
+                p = p->next;
+            }
+            n->next = p->next;
+            p->next = n;
+        }
+    }
+
     void display(){
         Node * n = head;
         while(n!=NULL){
