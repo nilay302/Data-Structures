@@ -56,6 +56,19 @@ class List{
         }
     }
 
+    void reverse(){
+        Node * n = head;
+        Node * p = NULL;
+        Node * q = NULL;
+        while(n!=NULL){
+            q = p;
+            p = n;
+            n = n->next;
+            p -> next = q;
+        }
+        head = p;
+    }
+
     void display(){
         Node * n = head;
         while(n!=NULL){
